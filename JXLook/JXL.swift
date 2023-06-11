@@ -48,6 +48,8 @@ struct JXL {
             
             JxlDecoderSetInput(decoder, nextIn, bytes.count)
             
+            var colorEncoding: JxlColorEncoding? = nil
+
             parsingLoop: while true {
                 let result = JxlDecoderProcessInput(decoder)
                 
@@ -69,16 +71,25 @@ struct JXL {
                 case JXL_DEC_SUCCESS:
                     return true
                 case JXL_DEC_COLOR_ENCODING:
-                    var iccSize: size_t = 0
-                    if JxlDecoderGetICCProfileSize(decoder, &format, JXL_COLOR_PROFILE_TARGET_DATA, &iccSize) != JXL_DEC_SUCCESS {
-                        Swift.print("Cannot get ICC size")
+                    var encoding = JxlColorEncoding()
+                    if JxlDecoderGetColorAsEncodedProfile(decoder, nil,
+                        JXL_COLOR_PROFILE_TARGET_ORIGINAL, &encoding) == JXL_DEC_SUCCESS {
+                        if JxlDecoderSetPreferredColorProfile(decoder, &encoding) != JXL_DEC_SUCCESS {
+                            Swift.print("Cannot set color encoding")
+                        }
+                        Swift.print("color encoding: \(encoding)")
+                        colorEncoding = encoding
+                    } else {
+                        var iccSize: size_t = 0
+                        if JxlDecoderGetICCProfileSize(decoder, &format, JXL_COLOR_PROFILE_TARGET_DATA, &iccSize) != JXL_DEC_SUCCESS {
+                            Swift.print("Cannot get ICC size")
+                        }
+                        icc?.deallocate()
+                        icc = UnsafeMutableBufferPointer<UInt8>.allocate(capacity: iccSize)
+                        if JxlDecoderGetColorAsICCProfile(decoder, &format, JXL_COLOR_PROFILE_TARGET_DATA, icc!.baseAddress, iccSize) != JXL_DEC_SUCCESS {
+                            Swift.print("Cannot get ICC")
+                        }
                     }
-                    icc?.deallocate() 
-                    icc = UnsafeMutableBufferPointer<UInt8>.allocate(capacity: iccSize)
-                    if JxlDecoderGetColorAsICCProfile(decoder, &format, JXL_COLOR_PROFILE_TARGET_DATA, icc!.baseAddress, iccSize) != JXL_DEC_SUCCESS {
-                        Swift.print("Cannot get ICC")
-                    }
-                    
                 case JXL_DEC_FULL_IMAGE:
                     let info = infoPtr.pointee
                     if (image != nil) {
@@ -103,7 +114,8 @@ struct JXL {
                         }
                     } else { // assume it's rgb
                         let num_channels = Int(format.num_channels)
-                        let colorSpace = icc.flatMap({ NSColorSpace(iccProfileData: Data(buffer: $0)) }) ?? .sRGB
+                        let colorSpace = decodeColorSpace(colorEncoding, icc)
+                        Swift.print("color space: \(colorSpace)")
                         let colorSpaceName: NSColorSpaceName = .calibratedRGB
                         var bitmapFormat: UInt = NSBitmapImageRep.Format.floatingPointSamples.rawValue;
                         if (info.alpha_premultiplied == 0) {
@@ -146,5 +158,43 @@ struct JXL {
         JxlThreadParallelRunnerDestroy(runner)
         JxlDecoderDestroy(decoder)
         return image
+    }
+
+    private static func constructColorSpace(_ name: CFString) -> NSColorSpace {
+        guard let cgColorSpace = CGColorSpace(name: name) else {
+            return .sRGB
+        }
+        return NSColorSpace(cgColorSpace: cgColorSpace) ?? .sRGB
+    }
+
+    private static func decodeColorSpace(_ colorEncoding: JxlColorEncoding?,
+                                         _ icc: UnsafeMutableBufferPointer<UInt8>?) -> NSColorSpace {
+        if let colorEncoding = colorEncoding {
+            switch colorEncoding.primaries {
+            case JXL_PRIMARIES_SRGB:
+                return .sRGB
+            case JXL_PRIMARIES_CUSTOM:
+                Swift.print("Mising implementation for color encoding primaries of type: JXL_PRIMARIES_CUSTOM")
+                return .sRGB
+            case JXL_PRIMARIES_2100:
+                if #available(macOS 11.0, *) {
+                    return constructColorSpace(CGColorSpace.itur_2100_PQ)
+                } else if #available(macOS 10.15.4, *) {
+                    return constructColorSpace(CGColorSpace.itur_2020_PQ)
+                } else {
+                    return constructColorSpace(CGColorSpace.itur_2020_PQ_EOTF)
+                }
+            case JXL_PRIMARIES_P3:
+                if #available(macOS 10.15.4, *) {
+                    return constructColorSpace(CGColorSpace.displayP3_PQ)
+                } else {
+                    return constructColorSpace(CGColorSpace.displayP3_PQ_EOTF)
+                }
+            default:
+                Swift.print("Unexpected color encoding primaries:  \(colorEncoding.primaries)")
+                return .sRGB
+            }
+        }
+        return icc.flatMap({ NSColorSpace(iccProfileData: Data(buffer: $0)) }) ?? .sRGB
     }
 }

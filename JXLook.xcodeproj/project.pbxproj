@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,13 +35,13 @@
 		85FC6DCA25BAC56E00A1AAF4 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FC6DC925BAC56E00A1AAF4 /* Quartz.framework */; };
 		85FC6DCD25BAC56E00A1AAF4 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC6DCC25BAC56E00A1AAF4 /* PreviewViewController.swift */; };
 		85FC6DD025BAC56E00A1AAF4 /* PreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85FC6DCE25BAC56E00A1AAF4 /* PreviewViewController.xib */; };
-		85FC6DD525BAC56E00A1AAF4 /* JXQuickLook.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 85FC6DC825BAC56E00A1AAF4 /* JXQuickLook.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		85FC6DD525BAC56E00A1AAF4 /* JXQuickLook.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 85FC6DC825BAC56E00A1AAF4 /* JXQuickLook.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		85FC6E5025BAD03500A1AAF4 /* JXL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC6E4F25BAD03500A1AAF4 /* JXL.swift */; };
 		85FC6E5125BAD03500A1AAF4 /* JXL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC6E4F25BAD03500A1AAF4 /* JXL.swift */; };
 		E99A66BF2745FA670008848F /* QuickLookThumbnailing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99A66BE2745FA670008848F /* QuickLookThumbnailing.framework */; platformFilter = maccatalyst; };
 		E99A66C02745FA670008848F /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FC6DC925BAC56E00A1AAF4 /* Quartz.framework */; };
 		E99A66C32745FA670008848F /* ThumbnailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A66C22745FA670008848F /* ThumbnailProvider.swift */; };
-		E99A66C82745FA670008848F /* JXQuickLookThumbnail.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E99A66BD2745FA670008848F /* JXQuickLookThumbnail.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E99A66C82745FA670008848F /* JXQuickLookThumbnail.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E99A66BD2745FA670008848F /* JXQuickLookThumbnail.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E99A66CE2745FB620008848F /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 859C090925C6566400BAFE90 /* libc++.1.tbd */; };
 		E99A66CF2745FB620008848F /* libjxl_threads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBC269C9A4F0036A75E /* libjxl_threads.a */; };
 		E99A66D02745FB620008848F /* libhwy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBD269C9A4F0036A75E /* libhwy.a */; };
@@ -93,16 +93,16 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85FC6DD625BAC56E00A1AAF4 /* Embed App Extensions */ = {
+		85FC6DD625BAC56E00A1AAF4 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				E99A66C82745FA670008848F /* JXQuickLookThumbnail.appex in Embed App Extensions */,
-				85FC6DD525BAC56E00A1AAF4 /* JXQuickLook.appex in Embed App Extensions */,
+				E99A66C82745FA670008848F /* JXQuickLookThumbnail.appex in Embed Foundation Extensions */,
+				85FC6DD525BAC56E00A1AAF4 /* JXQuickLook.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -159,7 +159,7 @@
 		85FC6DD125BAC56E00A1AAF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85FC6DD225BAC56E00A1AAF4 /* JXQuickLook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JXQuickLook.entitlements; sourceTree = "<group>"; };
 		85FC6E4725BAD00000A1AAF4 /* JXQuickLook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JXQuickLook-Bridging-Header.h"; sourceTree = "<group>"; };
-		85FC6E4F25BAD03500A1AAF4 /* JXL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXL.swift; sourceTree = "<group>"; };
+		85FC6E4F25BAD03500A1AAF4 /* JXL.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = JXL.swift; sourceTree = "<group>"; };
 		E99A66BD2745FA670008848F /* JXQuickLookThumbnail.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JXQuickLookThumbnail.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99A66BE2745FA670008848F /* QuickLookThumbnailing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLookThumbnailing.framework; path = System/Library/Frameworks/QuickLookThumbnailing.framework; sourceTree = SDKROOT; };
 		E99A66C22745FA670008848F /* ThumbnailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailProvider.swift; sourceTree = "<group>"; };
@@ -393,7 +393,7 @@
 				8573555925B56054005FF7C2 /* Sources */,
 				8573555A25B56054005FF7C2 /* Frameworks */,
 				8573555B25B56054005FF7C2 /* Resources */,
-				85FC6DD625BAC56E00A1AAF4 /* Embed App Extensions */,
+				85FC6DD625BAC56E00A1AAF4 /* Embed Foundation Extensions */,
 				859C0BA925C7E22900BAFE90 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -483,8 +483,9 @@
 		8573555525B56054005FF7C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1220;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					8573555C25B56054005FF7C2 = {
 						CreatedOnToolsVersion = 12.2;
@@ -697,6 +698,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -714,6 +716,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2021-2023 Yung-Luen Lan";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -759,6 +762,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -770,6 +774,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2021-2023 Yung-Luen Lan";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -791,6 +796,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -830,6 +836,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -864,6 +871,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
 				INFOPLIST_FILE = JXLookTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -871,7 +879,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = org.yllan.JXLookTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -887,6 +895,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
 				INFOPLIST_FILE = JXLookTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -894,7 +903,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = org.yllan.JXLookTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -909,6 +918,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
 				INFOPLIST_FILE = JXLookUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -930,6 +940,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
 				INFOPLIST_FILE = JXLookUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -953,6 +964,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/jpeg-xl/include/**";
@@ -985,6 +997,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/jpeg-xl/include/**";
@@ -1016,9 +1029,10 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/jpeg-xl/include/**";
 				INFOPLIST_FILE = JXQuickLookThumbnail/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = JXQuickLookThumbnail;
@@ -1051,9 +1065,10 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/jpeg-xl/include/**";
 				INFOPLIST_FILE = JXQuickLookThumbnail/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = JXQuickLookThumbnail;
