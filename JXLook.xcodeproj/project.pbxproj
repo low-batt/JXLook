@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		511A08D02A35475900A2C2EB /* libbrotlicommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 511A08CD2A35475900A2C2EB /* libbrotlicommon.a */; };
+		511A08D12A35475900A2C2EB /* libbrotlidec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 511A08CE2A35475900A2C2EB /* libbrotlidec.a */; };
+		511A08D52A354ABC00A2C2EB /* libbrotlidec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 511A08CE2A35475900A2C2EB /* libbrotlidec.a */; };
+		511A08D62A354AD300A2C2EB /* libbrotlicommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 511A08CD2A35475900A2C2EB /* libbrotlicommon.a */; };
+		511A08D72A354B1200A2C2EB /* libbrotlicommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 511A08CD2A35475900A2C2EB /* libbrotlicommon.a */; };
+		511A08D82A354B1600A2C2EB /* libbrotlidec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 511A08CE2A35475900A2C2EB /* libbrotlidec.a */; };
 		8573556125B56054005FF7C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573556025B56054005FF7C2 /* AppDelegate.swift */; };
 		8573556325B56054005FF7C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573556225B56054005FF7C2 /* ViewController.swift */; };
 		8573556525B56054005FF7C2 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573556425B56054005FF7C2 /* Document.swift */; };
@@ -19,18 +25,12 @@
 		859C091425C656DE00BAFE90 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8573564725B5D4E2005FF7C2 /* libc++.tbd */; };
 		859C0BA725C7E22800BAFE90 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859C0BA525C7E20000BAFE90 /* Sparkle.framework */; };
 		859C0BA825C7E22800BAFE90 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 859C0BA525C7E20000BAFE90 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		85E59CC2269C9A4F0036A75E /* libbrotlidec-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBB269C9A4F0036A75E /* libbrotlidec-static.a */; };
-		85E59CC3269C9A4F0036A75E /* libbrotlidec-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBB269C9A4F0036A75E /* libbrotlidec-static.a */; };
 		85E59CC4269C9A4F0036A75E /* libjxl_threads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBC269C9A4F0036A75E /* libjxl_threads.a */; };
 		85E59CC5269C9A4F0036A75E /* libjxl_threads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBC269C9A4F0036A75E /* libjxl_threads.a */; };
 		85E59CC6269C9A4F0036A75E /* libhwy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBD269C9A4F0036A75E /* libhwy.a */; };
 		85E59CC7269C9A4F0036A75E /* libhwy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBD269C9A4F0036A75E /* libhwy.a */; };
 		85E59CC8269C9A4F0036A75E /* libjxl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBE269C9A4F0036A75E /* libjxl.a */; };
 		85E59CC9269C9A4F0036A75E /* libjxl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBE269C9A4F0036A75E /* libjxl.a */; };
-		85E59CCA269C9A4F0036A75E /* libbrotlienc-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBF269C9A4F0036A75E /* libbrotlienc-static.a */; };
-		85E59CCB269C9A4F0036A75E /* libbrotlienc-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBF269C9A4F0036A75E /* libbrotlienc-static.a */; };
-		85E59CCC269C9A4F0036A75E /* libbrotlicommon-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CC0269C9A4F0036A75E /* libbrotlicommon-static.a */; };
-		85E59CCD269C9A4F0036A75E /* libbrotlicommon-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CC0269C9A4F0036A75E /* libbrotlicommon-static.a */; };
 		85E59CCF269C9A4F0036A75E /* libskcms.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CC1269C9A4F0036A75E /* libskcms.a */; };
 		85FC6DCA25BAC56E00A1AAF4 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FC6DC925BAC56E00A1AAF4 /* Quartz.framework */; };
 		85FC6DCD25BAC56E00A1AAF4 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC6DCC25BAC56E00A1AAF4 /* PreviewViewController.swift */; };
@@ -42,14 +42,11 @@
 		E99A66C02745FA670008848F /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FC6DC925BAC56E00A1AAF4 /* Quartz.framework */; };
 		E99A66C32745FA670008848F /* ThumbnailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A66C22745FA670008848F /* ThumbnailProvider.swift */; };
 		E99A66C82745FA670008848F /* JXQuickLookThumbnail.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E99A66BD2745FA670008848F /* JXQuickLookThumbnail.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E99A66CC2745FB620008848F /* libbrotlicommon-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CC0269C9A4F0036A75E /* libbrotlicommon-static.a */; };
-		E99A66CD2745FB620008848F /* libbrotlidec-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBB269C9A4F0036A75E /* libbrotlidec-static.a */; };
 		E99A66CE2745FB620008848F /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 859C090925C6566400BAFE90 /* libc++.1.tbd */; };
 		E99A66CF2745FB620008848F /* libjxl_threads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBC269C9A4F0036A75E /* libjxl_threads.a */; };
 		E99A66D02745FB620008848F /* libhwy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBD269C9A4F0036A75E /* libhwy.a */; };
 		E99A66D12745FB620008848F /* libskcms.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CC1269C9A4F0036A75E /* libskcms.a */; };
 		E99A66D22745FB620008848F /* libjxl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBE269C9A4F0036A75E /* libjxl.a */; };
-		E99A66D32745FB620008848F /* libbrotlienc-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBF269C9A4F0036A75E /* libbrotlienc-static.a */; };
 		E99A66D6274603540008848F /* JXL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC6E4F25BAD03500A1AAF4 /* JXL.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,8 +108,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		511A08CD2A35475900A2C2EB /* libbrotlicommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbrotlicommon.a; sourceTree = "<group>"; };
+		511A08CE2A35475900A2C2EB /* libbrotlidec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbrotlidec.a; sourceTree = "<group>"; };
+		511A08D32A35479300A2C2EB /* cms_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cms_interface.h; sourceTree = "<group>"; };
+		511A08D42A3547C500A2C2EB /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		8573555D25B56054005FF7C2 /* JXLook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXLook.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8573556025B56054005FF7C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8573556025B56054005FF7C2 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8573556225B56054005FF7C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8573556425B56054005FF7C2 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		8573556625B56055005FF7C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,12 +148,9 @@
 		85E59CB7269C9A4F0036A75E /* decode_cxx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decode_cxx.h; sourceTree = "<group>"; };
 		85E59CB8269C9A4F0036A75E /* encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = encode.h; sourceTree = "<group>"; };
 		85E59CB9269C9A4F0036A75E /* decode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decode.h; sourceTree = "<group>"; };
-		85E59CBB269C9A4F0036A75E /* libbrotlidec-static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libbrotlidec-static.a"; sourceTree = "<group>"; };
 		85E59CBC269C9A4F0036A75E /* libjxl_threads.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjxl_threads.a; sourceTree = "<group>"; };
 		85E59CBD269C9A4F0036A75E /* libhwy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libhwy.a; sourceTree = "<group>"; };
 		85E59CBE269C9A4F0036A75E /* libjxl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjxl.a; sourceTree = "<group>"; };
-		85E59CBF269C9A4F0036A75E /* libbrotlienc-static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libbrotlienc-static.a"; sourceTree = "<group>"; };
-		85E59CC0269C9A4F0036A75E /* libbrotlicommon-static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libbrotlicommon-static.a"; sourceTree = "<group>"; };
 		85E59CC1269C9A4F0036A75E /* libskcms.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libskcms.a; sourceTree = "<group>"; };
 		85FC6DC825BAC56E00A1AAF4 /* JXQuickLook.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JXQuickLook.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FC6DC925BAC56E00A1AAF4 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -175,13 +173,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85E59CCC269C9A4F0036A75E /* libbrotlicommon-static.a in Frameworks */,
-				85E59CC2269C9A4F0036A75E /* libbrotlidec-static.a in Frameworks */,
+				511A08D02A35475900A2C2EB /* libbrotlicommon.a in Frameworks */,
+				511A08D12A35475900A2C2EB /* libbrotlidec.a in Frameworks */,
 				859C091425C656DE00BAFE90 /* libc++.tbd in Frameworks */,
 				85E59CC4269C9A4F0036A75E /* libjxl_threads.a in Frameworks */,
 				85E59CC6269C9A4F0036A75E /* libhwy.a in Frameworks */,
 				85E59CC8269C9A4F0036A75E /* libjxl.a in Frameworks */,
-				85E59CCA269C9A4F0036A75E /* libbrotlienc-static.a in Frameworks */,
 				859C0BA725C7E22800BAFE90 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,14 +201,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85E59CCD269C9A4F0036A75E /* libbrotlicommon-static.a in Frameworks */,
-				85E59CC3269C9A4F0036A75E /* libbrotlidec-static.a in Frameworks */,
+				511A08D62A354AD300A2C2EB /* libbrotlicommon.a in Frameworks */,
+				511A08D52A354ABC00A2C2EB /* libbrotlidec.a in Frameworks */,
 				859C090A25C6566400BAFE90 /* libc++.1.tbd in Frameworks */,
 				85E59CC5269C9A4F0036A75E /* libjxl_threads.a in Frameworks */,
 				85E59CC7269C9A4F0036A75E /* libhwy.a in Frameworks */,
 				85E59CCF269C9A4F0036A75E /* libskcms.a in Frameworks */,
 				85E59CC9269C9A4F0036A75E /* libjxl.a in Frameworks */,
-				85E59CCB269C9A4F0036A75E /* libbrotlienc-static.a in Frameworks */,
 				85FC6DCA25BAC56E00A1AAF4 /* Quartz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,14 +216,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E99A66CC2745FB620008848F /* libbrotlicommon-static.a in Frameworks */,
-				E99A66CD2745FB620008848F /* libbrotlidec-static.a in Frameworks */,
+				511A08D72A354B1200A2C2EB /* libbrotlicommon.a in Frameworks */,
+				511A08D82A354B1600A2C2EB /* libbrotlidec.a in Frameworks */,
 				E99A66CE2745FB620008848F /* libc++.1.tbd in Frameworks */,
 				E99A66CF2745FB620008848F /* libjxl_threads.a in Frameworks */,
 				E99A66D02745FB620008848F /* libhwy.a in Frameworks */,
 				E99A66D12745FB620008848F /* libskcms.a in Frameworks */,
 				E99A66D22745FB620008848F /* libjxl.a in Frameworks */,
-				E99A66D32745FB620008848F /* libbrotlienc-static.a in Frameworks */,
 				E99A66BF2745FA670008848F /* QuickLookThumbnailing.framework in Frameworks */,
 				E99A66C02745FA670008848F /* Quartz.framework in Frameworks */,
 			);
@@ -329,6 +324,7 @@
 		85E59CA8269C9A4F0036A75E /* jxl */ = {
 			isa = PBXGroup;
 			children = (
+				511A08D32A35479300A2C2EB /* cms_interface.h */,
 				85E59CA9269C9A4F0036A75E /* resizable_parallel_runner_cxx.h */,
 				85E59CAA269C9A4F0036A75E /* color_encoding.h */,
 				85E59CAB269C9A4F0036A75E /* types.h */,
@@ -346,6 +342,7 @@
 				85E59CB7269C9A4F0036A75E /* decode_cxx.h */,
 				85E59CB8269C9A4F0036A75E /* encode.h */,
 				85E59CB9269C9A4F0036A75E /* decode.h */,
+				511A08D42A3547C500A2C2EB /* version.h */,
 			);
 			path = jxl;
 			sourceTree = "<group>";
@@ -353,12 +350,11 @@
 		85E59CBA269C9A4F0036A75E /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				85E59CBB269C9A4F0036A75E /* libbrotlidec-static.a */,
+				511A08CD2A35475900A2C2EB /* libbrotlicommon.a */,
+				511A08CE2A35475900A2C2EB /* libbrotlidec.a */,
 				85E59CBC269C9A4F0036A75E /* libjxl_threads.a */,
 				85E59CBD269C9A4F0036A75E /* libhwy.a */,
 				85E59CBE269C9A4F0036A75E /* libjxl.a */,
-				85E59CBF269C9A4F0036A75E /* libbrotlienc-static.a */,
-				85E59CC0269C9A4F0036A75E /* libbrotlicommon-static.a */,
 				85E59CC1269C9A4F0036A75E /* libskcms.a */,
 			);
 			path = lib;
@@ -718,7 +714,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -774,7 +770,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -792,9 +788,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = JXLook/JXLook.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = Z8M6R7T8R8;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -830,9 +827,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = JXLook/JXLook.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = Z8M6R7T8R8;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -863,6 +861,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
@@ -885,6 +884,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
@@ -906,6 +906,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
@@ -926,6 +927,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
@@ -949,6 +951,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = JXQuickLook/JXQuickLook.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -980,6 +983,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = JXQuickLook/JXQuickLook.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1009,6 +1013,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = JXQuickLookThumbnail/JXQuickLookThumbnail.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
@@ -1043,6 +1048,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = JXQuickLookThumbnail/JXQuickLookThumbnail.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z8M6R7T8R8;
